@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import {Box, Container} from "@mui/material";
+// import "./globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Box
+        component='body'
+        sx={{
+            margin: '0px',
+            fontFamily: 'Roboto, sans-serif',
+        }}
+      >
+         {children}
+      </Box>
     </html>
   );
 }
